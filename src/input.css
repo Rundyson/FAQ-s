@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Raleway;
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-[70px];
+  }
+  h2 {
+    @apply text-[33px];
+  }
+  h3 {
+    @apply text-[24px];
+  }
+  h4 {
+    @apply text-[16px];
+  }
+  h5 {
+    @apply text-[12px];
+  }
+  h6 {
+    @apply text-[10px];
+  }
+  p {
+    @apply text-[16px];
+  }
+}
+
+@layer components {
+  /* BUTTON */
+  .btn {
+    @apply py-2 px-4 bg-transparent border-transparent text-white;
+  }
+  .btn.bg-bluee {
+    @apply bg-blue border border-blue hover:bg-lightblue hover:border-lightblue hover:text-white font-semibold;
+  }
+  .btn.bg-greenn {
+    @apply bg-transparent border border-black text-black hover:text-white hover:bg-green;
+  }
+  .btn.bg-yelloww {
+    @apply bg-yellow border border-yellow;
+  }
+  .btn.bg-greenY {
+    @apply bg-green border border-green hover:bg-yellow hover:border-yellow;
+  }
+  .btn.bg-transY {
+    @apply bg-transparent border border-green text-black hover:bg-yellow hover:text-white;
+  }
+
+  /* HEADER */
+  .header__nav li a {
+    @apply lg:border-r lg:border-black lg:px-10 flex flex-col justify-center items-center gap-5;
+  }
+  .header__nav.open {
+    @apply right-0 overflow-y-hidden bg-white;
+  }
+  .toggle__menu {
+    @apply flex flex-col gap-1 lg:hidden;
+  }
+  .toggle__menu span {
+    @apply content-[*] bg-black w-10 h-1 duration-700;
+  }
+  .toggle__menu span:nth-child(2) {
+    @apply content-[*] bg-black w-10 h-1 duration-700 ;
+  }
+  .toggle__menu span:last-child {
+    @apply content-[*] bg-black w-10 h-1 duration-700 ;
+  }
+  .toggle__menu.open span {
+    @apply w-8 rotate-[38deg] transition-all;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply w-7 rotate-[360deg] transition-all;
+  }
+  .toggle__menu.open span:last-child {
+    @apply w-8 rotate-[-38deg] transition-all;
+  }
+
+  /* FAQS */
+  .faqs--info {
+    @apply mb-5 max-w-[80rem] mx-auto;
+  }
+  .faqs--info h4,
+  .faqs--info h4 i {
+    @apply bg-gray-100 text-black px-3 py-2 font-bold transition-all flex justify-between items-center cursor-pointer;
+  }
+  .faqs--info i.open {
+    @apply rotate-[900deg] transition-all;
+  }
+  .faqs--info ul{
+    @apply h-auto max-h-0 overflow-hidden transition-all text-justify ;
+  }
+  .faqs--info ul.open {
+    @apply max-h-[50rem] p-3 transition-all text-justify;
+  }
+
+
+
+  /* FAQS TABS */
+  .faqs__tab li{
+    @apply hover:text-green font-bold cursor-pointer;
+  }
+  .faqs__tab li.active {
+    @apply text-green border-b border-green cursor-pointer;
+  }
+  .faqs__details-info {
+    @apply hidden lg:hidden lg:max-w-[50rem] lg:mx-auto;
+  }
+  .faqs__details-info.active {
+    @apply block lg:block;
+  }
+  .faqs--info li i{
+    @apply text-green mr-1;
+  }
+  .faqs--info li{
+    @apply  py-2 flex items-start;
+  }
+
+}
